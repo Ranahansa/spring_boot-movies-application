@@ -15,7 +15,7 @@ public class Application {
 
 	@GetMapping("/")
 	public String apiRoot() {
-		return "Welcome to the Movies API!";
+		return "Welcome to";
 	}
 
 }
