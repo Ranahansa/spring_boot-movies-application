@@ -5,6 +5,9 @@
 
 .poster{
     height: 300px;
+    border: 1px solid gold;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .poster > img{
@@ -31,4 +34,9 @@
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+}
+.title{
+    color: white;
+    display: flex;
+    align-items: center;
 }
