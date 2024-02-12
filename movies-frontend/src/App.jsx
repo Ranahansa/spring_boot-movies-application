@@ -1,6 +1,8 @@
 import React from 'react';
 import api from './api/axiosConfig';
 import { useEffect, useState } from 'react';
+import Layout from './components/Layout';
+import {Routes, Route} from 'react-router-dom';
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -8,7 +10,6 @@ function App() {
   const getMovies = async () => {
     try {
       const response = await api.get('/api/v1/movies');
-      console.log(response.data);
       setMovies(response.data);
     } catch (error) {
       console.error('Error fetching movies: ', error);
@@ -20,9 +21,13 @@ function App() {
   }, []);
 
   return (
-    <>
-      <h1>Movie App</h1>
-    </>
+    <div className='App'>
+      <Routes>
+        <Route path='/' element={Layout }>
+
+          </Route>
+      </Routes>
+    </div>
   )
 }
 
